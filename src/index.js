@@ -1,6 +1,14 @@
-import { saludar } from './js/components';
+import { TareaList, Tareas } from "./classes/index";
+import { crearTareaHtml } from "./js/components";
 import './style.css';
-//import img from './assets/awesome_webpack_branding.png'
 
-const nombre = "Cristhian";
-saludar(nombre);
+export const tareasList = new TareaList();
+
+//const tarea = new Tareas("Aprendiendo JS");
+
+/* tareasList.nuevaTarea(tarea);
+
+crearTareaHtml(tarea); */
+
+tareasList.tareas.forEach(crearTareaHtml);
+console.log(tareasList);
